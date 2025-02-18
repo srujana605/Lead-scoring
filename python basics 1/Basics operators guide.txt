@@ -1,0 +1,226 @@
+1
+Which arithmetic operator is used to calculate the remainder of a division?
+
+
+/
+
+
+//
+
+
+**
+
+
+%
+
+Correct!
+
+
+2
+What is the significance of // in Arithmetic Operators?
+
+
+It performs standard division.
+
+
+It performs floor division (integer division).
+
+
+It calculates the square of a number.
+
+
+It calculates the remainder of a division.
+
+Correct!
+
+
+3
+Which logical operator returns True if at least one condition is True?
+
+
+not
+
+
+and
+
+
+or
+
+Correct!
+
+
+4
+Evaluate the expression
+
+(5 > 3) or (2 < 1)
+
+False
+
+
+True
+
+Correct!
+
+
+5
+What will be the output of the following?
+
+List1 = [1, 2, 3, 4]
+List2 = [2, 3, 4, 5]
+List3 = List1 + List2
+print(List3)
+
+[1, 1, 3, 4, 2, 3, 4, 5]
+
+
+[1, 2, 2, 3, 3, 4, 4, 5]
+
+
+[1, 2, 3, 4, 5]
+
+
+[1, 2, 3, 4, 2, 3, 4, 5]
+
+Correct!
+
+
+6
+Evaluate the expression
+
+a = 5
+a %= 3
+print(a)
+
+Error!
+2
+3
+1.67
+
+Correct!
+
+
+7
+What is the primary purpose of the walrus operator (:=) in Python?
+
+To perform bitwise AND operation.
+
+To assign a value to a variable within an expression.
+
+To create a new list comprehension.
+
+To define a lambda function.
+
+Correct!
+
+8
+Calculate the mean of everyone's age at the party!
+
+Alice is throwing a birthday party and wants to calculate the mean of everyone's age present in her birthday party. The age of people are stored in a list called, age_list.Calculate the average age using the arithmetic operators and store the result in a variable called avg_age.
+
+Correct!
+
+
+9
+Find the missing operators!
+
+For the given values of a and b, find the correct arithmetic operators that can replace the X and Y in the expression given in the jupyter notebook, such that the value of c = 25.
+
+Also write operator used in place of X and Y.
+
+Correct!
+
+
+10
+Complete the logic of the code.
+
+The code given in the jupyter notebook is used to calculate nth fibonacci series number using recursion. You need to complete the code using the correct set of arithmetic and assignment operators.
+
+Correct!
+
+
+11
+Calculate the Total Bill
+
+Vidhi purchased 2 apples, 20 bananas, and 1 grape. The price for each apple is 50, each banana costs 5, and each grape costs 40. Calculate the total amount she spent and store the result in the variable total_bill.
+
+Correct!
+
+
+12
+Is It a Leap Year?
+
+For the given python program to check if the year is a leap year or not, complete the code using the correct set of operators.
+
+Correct!
+
+
+13
+Check both conditions!
+
+For a given value of X, using operators write an expression to check if the value of X is greater than 10 and is even.
+
+Correct!
+
+
+14
+Which of the following expression would result in True?
+
+
+(True or False) or not (False or False)
+
+
+(True or False) and (False or False)
+
+
+(True or False) and not (False or False)
+
+
+not(True or False)
+
+Correct!
+
+
+15
+Fix the logical error in the code so it calculates the remainder when 100 is divided by 7.
+
+Correct!
+
+
+16
+Decode the Logic!
+
+Why does the following statement output Default on being executed?
+
+print({} or "Default")
+
+Because {} is truthy, so Python skips Default.
+
+
+Because the or operator always returns the second operand.
+
+
+Because {} is falsy, so Python evaluates and returns Default.
+
+
+Because Default is explicitly specified in the statement.
+
+Correct!
+
+
+17
+Why does the following statement output hello on being executed?
+
+print(5 and 'hello')
+
+Because 5 is falsy, so Python evaluates and returns hello.
+
+
+Because hello is explicitly specified in the statement.
+
+
+Because the and operator returns the last operand when both operands are truthy.
+
+
+Because the and operator always returns the second operand.
+
+Correct!
