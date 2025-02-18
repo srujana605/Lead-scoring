@@ -1,0 +1,131 @@
+1
+Define a variable num with value 100 of integer data type.
+
+Correct!
+
+  Define a variable score with value 100 of float data type
+
+Correct!
+
+
+  3
+Define a variable name of string data type with your first name.
+
+Correct!
+
+
+  4
+Identify data type of variable result
+
+
+Preview
+
+  6
+Convert to Upper case
+
+Write a code to convert all character of given text into upper-case. Store result in variable text_upper.
+
+Hello, I am Datawars. I help users to learn Data Science
+
+Correct!
+
+
+  7
+Convert to Lower case
+
+Write a code to convert all character of given text into lower-case. Store the result in variable text_lower.
+
+PYTHON IS A PROGRAMMING LANGUAGE
+
+Correct!
+
+
+  8
+String Concatenation
+
+Write a Python code to concatenate the strings first_name as Alice and last_name as Brown. Don't forget to give a space in between first name and last name. Store the full name in variable full_name.
+
+Correct!
+
+9
+Type Conversion and Arithmetic
+
+Write a Python code to take a float percentage as 85.5, convert it to an integer, and then add 10 to it. Store the final output in a variable result.
+
+Correct!
+
+
+  10
+Multi-line String Representation
+
+Write a Python code to declare a variable student_info and assign it a multi-line string containing the student’s name as Alice, ID is 101, and score is 90. Print the variable student_info.
+
+Expected outcome:
+
+
+Preview
+Correct!
+
+  11
+Boolean Operation
+
+Write a Python code to declare two boolean variables attended_classes as True and submitted_assignment as False. Use the and operator to check if both are True. Store the value in variable result.
+
+Correct!
+
+
+  12
+String Indexing and Slicing
+
+Write a Python code to declare a string student_name as Alice. Store the first character and the last three characters of the string in variables first_char and last_three_chars respectively.
+
+Correct!
+
+
+  13
+Reverse a String
+
+Write a Python code to reverse the string student_name as Alice and print the reversed name. Store the result in variable reversed_name.
+
+Correct!
+
+
+  14
+Sum of Digits of a Student ID
+
+Write a Python code to calculate the sum of the digits of a student’s ID (student_id = 123). Store the result in variable digit_sum.
+
+Do not use loops to solve the problem.
+
+Correct!
+
+
+  15
+Compute Final Score
+
+Write a Python code to calculate the final score of a student by taking their exam_score as 90 and assignment_score as 40. Multiply the exam_score by 0.6 and the assignment_score by 0.4, then add them together. Store the result in variable final_score.
+
+Correct!
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
