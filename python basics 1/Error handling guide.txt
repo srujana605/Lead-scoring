@@ -1,0 +1,597 @@
+1
+What type of error occurs when you try to divide by zero in Python?
+
+Runtime Error
+
+Indentation Error
+
+Syntax Error
+
+Logical Error
+
+Correct!
+
+
+2
+Which of the following represents a Syntax Error?
+
+y = int("hello")
+
+print(5 / 0)
+
+average = sum(numbers) / len(numbers) + 1
+
+if x == 5 print("x is five")
+
+Correct!
+
+
+3
+What will be output of given python code?
+
+Preview
+Logical Error
+
+Print "Hello"
+
+Empty String
+
+
+Syntax Error
+
+Correct!
+
+
+4
+What type of error might this code produce result = (10 + 5) / 3 + 1 if result is expected to be 5?
+
+TypeError
+
+Logical Error
+
+Runtime Error
+
+Syntax Error
+
+Correct!
+
+
+5
+Which among the following will raise Syntax Error?
+
+print(10/0)
+
+print("Result":)
+
+for i in range(10): print(i)
+
+x = 5
+
+Correct!
+
+
+Error Handling
+How to Handle Errors in Python?
+Python uses try-except blocks to handle errors. These blocks allow you to try a piece of code and catch specific errors if they occur.
+
+Syntax:
+
+try:
+    # Code that might raise an error
+except SomeError:
+    # Code to execute if the error occurs
+Example:
+
+try:
+    result = 10 / 0  # This raises a ZeroDivisionError
+except ZeroDivisionError:
+    print("You can’t divide by zero!")
+The program doesn’t crash; instead, it prints an error message and continues executing.
+
+Error handling is an essential part of Python programming. By understanding how to manage errors effectively using try, except, else, and finally, you can build programs that are resilient and user-friendly. In the next section, we’ll explore advanced error handling techniques and custom exceptions. 🚀
+
+6
+What type of error occurs when trying to read a file that does not exist?
+
+
+Indentation Error
+
+
+Logical Error
+
+
+Runtime Error
+
+
+Syntax Error
+
+Correct!
+
+
+7
+You wrote a program that asks users for a number, but the user enters a string instead. How can you handle potential errors?
+
+
+Use a try/except block to catch ValueError
+
+
+Use an if statement to check if it's a number
+
+
+Just let the program crash
+
+
+None of the above
+
+Correct!
+
+Various Methods to Handle Errors in Python
+Error handling can be approached in multiple ways based on the context of your program. Here are some common methods:
+
+1. Using try-except Blocks:
+
+This is the most common way to handle errors in Python. It allows you to catch and handle exceptions.
+
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+2. Using Multiple Except Blocks:
+
+You can handle different types of errors separately by specifying multiple except blocks
+
+try:
+    num = int("hello")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+except TypeError:
+    print("Type error occurred.")
+3. Catching All Exceptions:
+
+You can catch all exceptions using a generic except block, but this should be used cautiously.
+
+try:
+    risky_code()
+except Exception as e:
+    print(f"An error occurred: {e}")
+4. Using else Block:
+
+This block executes if no exception occurs
+
+try:
+    print("No error!")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print("Something went wrong.")
+5. Using finally Block:
+
+This block is used for cleanup actions, such as closing files or releasing resources.
+
+try:
+    file = open("example.txt", "r")
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Operation completed.")
+6. Raising Exceptions:
+
+You can manually raise exceptions using the raise keyword
+
+try:
+    age = -1
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+except ValueError as e:
+    print(e)
+Lets practice some more examples to understand these techniques better.
+
+8
+During arithmetic operations, if you accidentally multiply a float with a string, which error will occur? How can you prevent this?
+
+
+NameError; check variable names
+
+
+IndentationError; adjust spacing
+
+
+SyntaxError; change the code format
+
+
+TypeError; use try/except to catch it
+
+Correct!
+
+
+9
+What will be output of following code?
+
+
+Preview
+
+57
+
+
+TypeError
+
+
+12
+
+
+"5" + 7
+
+Correct!
+.
+
+10
+What is the purpose of an else block in a try-except structure?
+
+
+To handle all types of exceptions
+
+
+It has no purpose and is optional
+
+
+To provide cleanup actions
+
+
+To execute code only if no exceptions occur
+
+Correct!
+
+
+11
+What does the finally block guarantee in Python?
+
+
+It runs only if the try block has no errors
+
+
+It executes only when no exceptions are raised
+
+
+It guarantees that the code runs regardless of whether an exception occurred or not.
+
+
+It guarantees that the code runs before exceptions are raised
+
+Correct!
+
+
+12
+Which of the following is not a built-in exception in Python?
+
+
+OutOfMemoryError
+
+
+AttributeError
+
+
+ImportError
+
+
+ValueError
+
+Correct!
+
+
+13
+When handling exceptions, what happens if an exception occurs inside an except block but there is no subsequent try block to catch it?
+
+
+The program terminates and prints the traceback
+
+
+The program continues executing the next line after the except block
+
+
+It raises a warning but does not stop execution
+
+
+The program handles the second exception automatically
+
+Correct!
+
+
+14
+Which of the following statements correctly describes how to handle an IndentationError?
+
+
+Indentation errors can be ignored without consequences
+
+
+Correct the indentation in the code before running it
+
+
+Use a default value when the error occurs
+
+
+Wrap the code in a try-except block to catch it
+
+Correct!
+
+
+15
+Which of the following statements about finally blocks is false?
+
+
+A finally block executes regardless of whether an exception is raised
+
+
+A finally block can be skipped if there is an unhandled exception
+
+
+The finally block will execute even if a return statement is encountered in the try block
+
+
+You cannot have a finally block without a corresponding try block
+
+Correct!
+
+
+16
+Select the correct output of this code
+
+
+Preview
+
+It will terminate immediately if a negative number is entered
+
+
+It will print an error message if a negative number (other than -1) is entered, and continue asking for input until -1 is entered
+
+
+It will give a syntax error
+
+
+It will print nothing and exit the program
+
+Correct!
+Various Methods to Handle Errors in Python
+Error handling can be approached in multiple ways based on the context of your program. Here are some common methods:
+
+1. Using try-except Blocks:
+
+This is the most common way to handle errors in Python. It allows you to catch and handle exceptions.
+
+try:
+    print(10 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+2. Using Multiple Except Blocks:
+
+You can handle different types of errors separately by specifying multiple except blocks
+
+try:
+    num = int("hello")
+except ValueError:
+    print("Invalid input! Please enter a number.")
+except TypeError:
+    print("Type error occurred.")
+3. Catching All Exceptions:
+
+You can catch all exceptions using a generic except block, but this should be used cautiously.
+
+try:
+    risky_code()
+except Exception as e:
+    print(f"An error occurred: {e}")
+4. Using else Block:
+
+This block executes if no exception occurs
+
+try:
+    print("No error!")
+except ZeroDivisionError:
+    print("Cannot divide by zero.")
+else:
+    print("Something went wrong.")
+5. Using finally Block:
+
+This block is used for cleanup actions, such as closing files or releasing resources.
+
+try:
+    file = open("example.txt", "r")
+except FileNotFoundError:
+    print("File not found.")
+finally:
+    print("Operation completed.")
+6. Raising Exceptions:
+
+You can manually raise exceptions using the raise keyword
+
+try:
+    age = -1
+    if age < 0:
+        raise ValueError("Age cannot be negative.")
+except ValueError as e:
+    print(e)
+Lets practice some more examples to understand these techniques better.
+
+8
+During arithmetic operations, if you accidentally multiply a float with a string, which error will occur? How can you prevent this?
+
+
+NameError; check variable names
+
+
+IndentationError; adjust spacing
+
+
+SyntaxError; change the code format
+
+
+TypeError; use try/except to catch it
+
+Correct!
+Start project before checking your activities.
+
+9
+What will be output of following code?
+
+
+Preview
+
+57
+
+
+TypeError
+
+
+12
+
+
+"5" + 7
+
+Correct!
+Start project before checking your activities.
+
+10
+What is the purpose of an else block in a try-except structure?
+
+
+To handle all types of exceptions
+
+
+It has no purpose and is optional
+
+
+To provide cleanup actions
+
+
+To execute code only if no exceptions occur
+
+Correct!
+Start project before checking your activities.
+
+11
+What does the finally block guarantee in Python?
+
+
+It runs only if the try block has no errors
+
+
+It executes only when no exceptions are raised
+
+
+It guarantees that the code runs regardless of whether an exception occurred or not.
+
+
+It guarantees that the code runs before exceptions are raised
+
+Correct!
+Start project before checking your activities.
+
+12
+Which of the following is not a built-in exception in Python?
+
+
+OutOfMemoryError
+
+
+AttributeError
+
+
+ImportError
+
+
+ValueError
+
+Correct!
+Start project before checking your activities.
+
+13
+When handling exceptions, what happens if an exception occurs inside an except block but there is no subsequent try block to catch it?
+
+
+The program terminates and prints the traceback
+
+
+The program continues executing the next line after the except block
+
+
+It raises a warning but does not stop execution
+
+
+The program handles the second exception automatically
+
+Correct!
+Start project before checking your activities.
+
+14
+Which of the following statements correctly describes how to handle an IndentationError?
+
+
+Indentation errors can be ignored without consequences
+
+
+Correct the indentation in the code before running it
+
+
+Use a default value when the error occurs
+
+
+Wrap the code in a try-except block to catch it
+
+Correct!
+Start project before checking your activities.
+
+15
+Which of the following statements about finally blocks is false?
+
+
+A finally block executes regardless of whether an exception is raised
+
+
+A finally block can be skipped if there is an unhandled exception
+
+
+The finally block will execute even if a return statement is encountered in the try block
+
+
+You cannot have a finally block without a corresponding try block
+
+Correct!
+Start project before checking your activities.
+
+16
+Select the correct output of this code
+
+
+Preview
+
+It will terminate immediately if a negative number is entered
+
+
+It will print an error message if a negative number (other than -1) is entered, and continue asking for input until -1 is entered
+
+
+It will give a syntax error
+
+
+It will print nothing and exit the program
+
+Correct!
+
+17
+What will be the output of the following code snippet if the user inputs is -5.
+
+
+Preview
+
+Only positive numbers are allowed. You entered: 3
+
+
+You entered: 5
+
+
+Only positive numbers are allowed
+
+
+Execution will stop without any output
+
+Correct!
+
