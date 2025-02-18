@@ -1,0 +1,210 @@
+A function is a block of code that you define once and can reuse multiple times. Functions help break down large problems into smaller, manageable pieces. Without functions, your code can become repetitive, harder to understand, and more difficult to maintain.
+
+Functions make your code:
+
+Organized: Group related code into logical chunks.
+Reusable: Write once, call many times.
+Clear: A well-named function communicates what it does.
+Example:
+
+def greet() -> str:
+    return "Hello, friend!"
+This defines a simple function greet that returns the string "Hello, friend!".
+
+Parameters vs. Arguments
+Parameters are the variables listed inside the parentheses in a function definition. They act like placeholders.
+Arguments are the actual values you provide when you call the function.
+For example:
+
+def add(a: int, b: int) -> int:
+    return a + b
+
+result = add(5, 3)  # Here, 5 and 3 are arguments passed to parameters a and b
+Here, a and b are parameters, and 5 and 3 are arguments.
+
+The `return` Statement
+If a function is like a machine that processes input and produces output, then return is how the machine hands the output back to you. Without a return, a function will return None by default.
+
+def squared(x: int) -> int:
+    return x * x
+
+val = squared(4)  # val now holds 16
+In this example, the squared function returns the square of the input x. The return statement sends the result back to the caller.
+
+If you forget return, you might not get the value you expect.
+
+Local vs. Global Variables
+Local variables: Defined inside a function and accessible only there.
+Global variables: Defined outside functions and accessible anywhere in your code.
+Keeping variables local helps avoid unintended side effects in your code.
+
+For example:
+
+message = "Global"
+
+def change_message() -> str:
+    message = "Local"
+    return message
+
+print(change_message())  # Returns "Local"
+# Outside the function, message is still "Global"
+print(message)  # Prints "Global"
+Here, message is a global variable, and change_message defines a local variable with the same name. The local variable is only accessible inside the function. The global variable remains unchanged.
+
+Docstrings: Documenting Your Functions
+A docstring is a triple-quoted string that describes what a function does. It’s the first thing inside your function definition. Using docstrings makes your code more understandable for other developers and for your future self.
+
+def multiply(x: int, y: int) -> int:
+    """
+    Multiply two integers x and y and return their product.
+    """
+    return x * y
+Docstrings are also useful for generating documentation automatically. You can access them using the __doc__ attribute of a function.
+
+print(multiply.__doc__)
+This will print the docstring of the multiply function.
+
+Type Annotations for Clarity
+In the above examples function code, you might have noticed the -> int and -> str annotations. These are type hints that specify the expected type of the function’s return value.
+
+These hints are optional but can help you and other developers understand your code better. They also help catch type-related bugs early.
+
+def add(a: int, b: int) -> int:
+    return a + b
+Here, a: int and b: int indicate that a and b should be integers, and -> int specifies that the function will return an integer.
+
+Annotate parameters: a: int, b: int
+Annotate return type: -> int
+Type hints are not enforced by Python, but tools like [mypy](https://mypy.readthedocs.io/en/stable/) can check your code for type errors.
+
+Activities
+1
+Which keyword is used to define a function?
+Select the correct keyword used to define a function in Python from the following options:
+function
+def
+define
+func
+Correct!
+
+
+2
+What value does it return by default?
+If a function does not have a return statement, what value does it return by default?
+True
+False
+None
+0
+It will throw an error
+Correct!
+
+
+3
+Personalized Greeting
+
+Create a function greet_user(name: str) -> str that takes a name as an argument and returns a personalized greeting message as shown below.
+
+Expected outcome:
+
+The function should return a greeting message with the given name.
+
+Example:
+
+greet_user("Alice")
+Output:
+
+"Hello, Alice!"
+Correct!
+
+
+4
+What’s the difference between parameters and arguments in a function?
+
+
+Arguments are always integers, parameters are always strings.
+
+
+Parameters are the values passed to the function when calling it, while arguments are defined inside the function.
+
+
+Arguments and parameters mean the same thing in Python.
+
+
+Parameters are the placeholders listed in the function definition; arguments are the actual values you pass to the function when calling it.
+
+Correct!
+
+
+5
+What is the correct output?
+
+Below is the code snippet:
+
+message = "Now you are at activity number 5"
+
+def change_message() -> str:
+    message = "Next activity is number 6"
+    return message
+
+print(change_message())
+print(message)
+What will be the output of the code?
+
+
+Next activity is number 6
+Now you are at activity number 5
+
+Next activity is number 6
+Next activity is number 6
+
+Now you are at activity number 5
+Now you are at activity number 5
+
+Now you are at activity number 5
+Next activity is number 6
+Correct!
+
+6
+Rectangle Area Calculator
+
+Create a function rectangle_area(width: float, height: float) -> float that calculates the area of a rectangle given its width and height. The function should return the area as a floating-point number.
+
+Expected outcome:
+
+The function should return the area of the rectangle as a floating-point number.
+
+Example:
+
+rectangle_area(5.0, 3.0)
+Output:
+
+15.0
+Correct!
+Start project before checking your activities.
+
+7
+In Python, code inside a function must be
+
+Select the correct option:
+
+Indented by at least one space
+
+Indented by exactly two spaces
+
+Indented consistently (commonly 4 spaces) after the def line
+
+Aligned with the left margin
+Correct!
+
+
+8
+Currency Converter
+Create a function convert_currency(amount: float, rate: float) -> float that converts an amount from one currency to another using the given exchange rate. The function should return the converted amount as a floating-point number.
+Expected outcome:
+The function should return the converted amount as a floating-point number.
+Example:
+convert_currency(100.0, 0.85)
+Output:
+85.0
+Correct!
+
