@@ -1,0 +1,164 @@
+1
+Check Odd or Even
+
+Write a python function is_even that takes a number as input and returns True if it’s even, otherwise False.
+
+Correct!
+
+
+2
+Check for Free Delivery!
+
+For an e-commerce platform Candy, orders above $50 qualify for free delivery.
+
+Write a python function check_free_delivery to check if the order qualifies for a free delivery!
+
+If the order is eligible for a free delivery, return 'Yay, free delivery!'.
+
+Otherwise return 'Oops, no free delivery!'.
+
+Correct!
+
+
+3
+Check Eligibility for Discounts
+
+A customer is eligible for a discount if they either spend more than ₹5000 or have a membership and spend more than ₹3000. Write the expression to calculate if the customer is eligible for a discount.
+
+Correct!
+
+4
+Detect a Quadratic Equation
+
+For an equation ax^2 + bx + c = 0, it's quadratic if a ≠ 0. Write a function is_quadratic(a, b, c) to return True if it's a quadratic equation and False otherwise.
+
+Correct!
+
+5
+Check Voting Eligibility
+
+A person can vote if they are -
+
+18 years old or older.
+A citizen of the country.
+Write an expression that checks if a person satisfies these conditions.
+
+Correct!
+
+6
+Calculate Grade Based on Marks
+
+Given a student's marks out of 100:
+
+If marks ≥ 90, the grade is A.
+If marks ≥ 75, the grade is B.
+If marks ≥ 50, the grade is C.
+Otherwise, the grade is F.
+Complete the program to calculate and print the grade.
+
+Correct!
+
+7
+Calculate Compound Interest
+
+Write a function to calculate compound interest using the formula:
+
+C
+I
+=
+P
+×
+(
+1
++
+R
+100
+)
+T
+−
+P
+
+Where: - (P): Principal amount (the initial sum of money)
+
+(R): Annual interest rate (in percentage)
+
+(T): Time period (in years)
+
+Correct!
+
+
+8
+Eras Tour Ticket Revenue Analysis!
+
+The Taylor Swift Eras Tour has sold tickets across three seating categories: General Admission, VIP, and Ultra VIP. The ticket sales data is as follows:
+
+General Admission: 25,000 tickets at $100 each
+
+VIP: 5,000 tickets at $250 each
+
+Ultra VIP: 1,000 tickets at $500 each
+
+Additionally, a 5% service charge is applied to the total revenue from ticket sales.
+
+You need to calculate the following:
+
+The total revenue (before the service charge).
+The final revenue (after deducting the service charge).
+Check if the final revenue crossed the $10,000,000 milestone.
+Correct!
+
+
+9
+Discount Calculator for a Shopping Spree
+
+You are shopping online and have three items in your cart. The store offers discounts based on the total price:
+
+If the total cost is greater than ₹5000, you get a 20% discount.
+If the total cost is between ₹3000 and ₹5000 (both inclusive), you get a 10% discount.
+Otherwise, no discount is applied.
+Complete the program to calculate and print the final price after applying the discount.
+
+Correct!
+
+
+10
+Split the Bill with Friends
+
+You and your friends went to a restaurant and ordered food. You want to split the bill equally, but there's a condition:
+
+If the total bill is perfectly divisible among the group, each person pays an equal amount.
+If the total bill is not divisible by the number of people, round the total bill up to the nearest ₹100 (i.e 1234 becomes 1300).
+After rounding, if the bill is still not perfectly divisible by the number of friends, round up the amount each person has to pay to the next whole number.
+Define a program Split_Bill that takes the bill amount and the number of friends as input and calculates the total adjusted bill and the amount that each person needs to pay.
+
+Correct!
+
+
+11
+Weekend Road Trip Decision
+
+You and your friends are planning a weekend road trip. Here's the situation:
+
+Weather condition: The weather should not be rainy.
+Car availability: At least one of you or your friend should have a car.
+Budget: The total budget should be at least ₹5000, and both of you should have money to contribute.
+If all the above conditions are satisfied your program should return Pack your bags! You're going on the road trip!,. Otherwise, it should return Stay home and plan for another time..
+
+Complete the program to determine the outcome.
+
+Correct!
+
+12
+Secret Code Lock
+
+You have discovered an ancient treasure chest, but it’s locked with a 3-digit secret code. Each digit of the code ranges from 1 to 9.
+
+Here's what you know:
+
+The sum of the three digits is equal to 15.
+All three digits are different.
+You need to complete the python program find_secret_codes that satisfies both the above conditions.
+
+Note : The combinations must be unique. For example, if one combination is 1, 5, 9, other combinations like 5, 1, 9 or 9, 5, 1 should not be included.
+
+Correct!
