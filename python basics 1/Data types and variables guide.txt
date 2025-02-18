@@ -1,0 +1,273 @@
+The Basic Python Data Types
+Let’s start with some basic data types in Python:
+
+1. Numeric Types:
+Python has three types of numeric data types:
+
+int: Integer numbers (whole numbers), Example: x = 5
+float: Floating-point numbers (decimals), Example: y = 3.14
+complex: Complex numbers with real and imaginary parts, Example: z = 2 + 3j
+Lets do practical:
+
+a = 10      # int
+b = 3.14    # float
+c = 2 + 3j  # complex
+
+print(type(a))  # Output: <class 'int'="">
+print(type(b))  # Output: <class 'float'="">
+print(type(c))  # Output: <class 'complex'="">
+2. Boolean Values:
+A boolean can only be one of two values: True or False. These are essential for logical operations and control flow (like if-else statements).
+
+Example: is_raining = True
+
+Example: is_sunny = False
+
+is_adult = True
+is_child = False
+
+print(type(is_adult))  # Output: <class 'bool'="">
+print(type(is_child))  # Output: <class 'bool'="">
+Booleans are often the result of comparison or logical operations:
+
+For Example,
+
+
+Preview
+3. Strings:
+Strings are sequences of characters surrounded by quotes. Python allows you to use single quotes ('), double quotes ("), or triple quotes (''' or """).
+
+For Example: 'Hello', "World", '''Python is fun'''
+
+You can even include special characters like newline (\n) or tabs (\t).
+
+# single and double quote
+name = "Alice"
+greeting = 'Hello, world!'
+
+# multi line string is declared in tripple quote
+multiline_string = '''This is
+a multi-line
+string.'''
+
+print(type(name))  # Output: <class 'str'="">
+print(type(greeting))  # Output: <class 'str'="">
+
+1
+What is the output of the following code?
+
+Preview
+class 'float'
+class 'int'
+class 'complex'
+class 'str'
+Correct!
+
+2
+What is the data type of num = '10'?
+Boolean
+Float
+String
+Integer
+Correct!
+
+
+3
+Which is the correct way of defining a string variable?
+age = "Ten"
+age = 10
+string age = 10
+age = TRUE
+Correct!
+
+
+Type conversion refers to the process of converting a value from one data type to another. Python provides two types of type conversion:
+
+Implicit Type Conversion
+Python automatically converts one data type to another when it is safe to do so. This process is known as implicit type conversion or type coercion.
+
+x = 10  # int
+y = 3.14  # float
+result = x + y  # x is implicitly converted to float
+print(result)  # Outputs: 13.14
+print(type(result))  # Outputs: <class 'float'="">
+Explicit Type Conversion
+Explicit type conversion, also called type casting, is done manually by using functions like int(), float(), str(), etc. Python provides built-in functions for this purpose. For example:
+
+Convert integer to float
+x = 5
+y = float(x)  # y becomes 5.0
+Convert float to integer:
+z = int(3.14)  # z becomes 3
+Convert to string
+num = 42
+text = str(num)  # text becomes '42'
+Here float(), int(), and str() are used to convert data types, respectively. This process is known as type casting or explicit type conversion.
+Checking Data Types
+Python type() function allows you to check the data type of a variable.
+
+
+4
+What will int('10.5') return?
+0
+10
+Error
+10.5
+Correct!
+
+5
+Which is a valid variable name?
+class
+_variable
+break
+2variable
+Correct!
+
+
+6
+What will be the output of the given python code?
+Preview
+10
+Error
+30
+1020
+Correct!
+
+
+7
+Which function is used to check the type of a variable?
+type()
+checktype()
+isType()
+typeof()
+Correct!
+
+8
+Which of the following is NOT a valid string declaration?
+greeting = Hello
+greeting = 'Hello'
+greeting = '''Hello'''
+greeting = "Hello"
+Correct!
+
+
+9
+What is the result of (0.1 + 0.2 == 0.3)?
+Error
+False
+None
+True
+Correct!
+
+
+10
+What will print(5+True) result in?
+ValueError
+TypeError
+5
+6
+correct!
+
+
+11
+What will be output of print('2' * 3)?
+'222'
+'6'
+TypeError
+6
+Correct!
+
+12
+What will the given python code evaluate to?
+Preview
+2
+0
+1
+True
+Correct!
+
+
+The isinstance() function in Python is used to check if an object is an instance of a specific class or a tuple of classes.
+
+It returns True if the object is an instance of the specified class or any of its subclasses; otherwise, it returns False.
+
+Syntax:
+
+isinstance(object, classinfo)
+Where:
+
+object: The object you want to test.
+
+classinfo: A class, type, or a tuple of classes and types to check against.
+
+For Example:
+
+x = 5
+print(isinstance(x, int))  # Output: True
+
+13
+What will be the output of the given python code?
+
+
+Preview
+
+Error
+
+
+True
+
+
+10
+
+
+False
+
+Correct!
+Start project before checking your activities.
+
+Differences between type() and isinstance() Functions
+The isinstance() and type() functions in Python both check the type of an object, but they have important differences in their behavior and usage.
+
+Here are some key differences between the two functions:
+
+Return Values
+
+isinstance(): Returns a boolean value (True or False)
+
+type(): Returns the actual class/type of the object
+
+For Example:
+
+score = 42
+print(isinstance(score, int))  # Output: True  
+print(type(score)) # Output: class 'int'
+Multiple Types Check
+
+isinstance(): The isinstance() function can check if an object is an instance of multiple classes.
+
+type(): The type() function can only check if an object is an instance of a single class.
+
+Subclass Checking
+
+isinstance(): The isinstance() function can check if an object is an instance of a class or any of its subclasses.
+
+type(): The type() function can only check if an object is an instance of a specific class.
+
+The isinstance() function is mostly used with data structures and classes, thus it will be explained in detail in the upcoming lessons.
+
+14
+What does the isinstance() function return?
+A boolean (True or False)
+An integer (0 or 1)
+An object type
+None
+Correct!
+
+
+15
+What will be print(isinstance(str(42), str)) return?
+Error
+True
+False
+None
+Correct!
