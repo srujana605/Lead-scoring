@@ -1,0 +1,316 @@
+1. Compare Class Performances
+def compare_class_performance(class_x_marks, class_y_marks):
+    try:
+        # Validate input
+        if not (isinstance(class_x_marks, list) and isinstance(class_y_marks, list)):
+            raise ValueError("Both inputs must be lists.")
+        
+        if not (all(isinstance(mark, (int, float)) for mark in class_x_marks) and 
+                all(isinstance(mark, (int, float)) for mark in class_y_marks)):
+            raise ValueError("All marks must be integers or floats.")
+        
+        if len(class_x_marks) == 0 or len(class_y_marks) == 0:
+            raise ValueError("Lists of marks cannot be empty.")
+        
+        # Calculate averages
+        avg_x = sum(class_x_marks) / len(class_x_marks)
+        avg_y = sum(class_y_marks) / len(class_y_marks)
+        
+        # Compare and return result
+        if avg_x > avg_y :
+            return "Class X is better than Class Y."
+        elif avg_x < avg_y :
+            return "Class Y is better than Class X."
+        else:
+            return "Both classes are equally good."
+    
+    except Exception as e:
+        return f"Error: {e}"
+2. Total Price Calculation with Discount
+def calculate_total_price(items, prices, discount):
+    try:
+        if len(items) != len(prices):
+            raise ValueError("Items and prices lists must be of same length")
+        
+        total = 0
+        for i in range(len(items)):
+            if items[i] < 0 or prices[i] < 0:
+                raise ValueError("Quantities and prices cannot be negative")
+            total += items[i] * prices[i]
+            
+        final_price = total * (1 - discount/100)
+        return round(final_price, 2)
+    except Exception as e:
+        return f"Error: {e}"
+3. Analyze Ratings of Movies
+def analyze_ratings(ratings, threshold):
+    try:
+        if not ratings:
+            raise ValueError("Ratings list cannot be empty")
+            
+        for rating in ratings:
+            if rating < 1 or rating > 5:
+                raise ValueError("Ratings must be between 1 and 5")
+                
+        average = sum(ratings) / len(ratings)
+        return average >= threshold
+    except Exception as e:
+        return f"Error: {e}"
+4. Create a Password Strength Checker
+def check_password_strength(password, min_length=8):
+    try:
+        if len(password) < min_length:
+            return "Minimum length of password is 8."
+            
+        criteria = [0, 0, 0, 0]  # digits, upper, lower, special
+        special_chars = ['@', '#', '$', '%', '&']
+        
+        for char in password:
+            if char.isdigit():
+                criteria[0] = 1
+            elif char.isupper():
+                criteria[1] = 1
+            elif char.islower():
+                criteria[2] = 1
+            elif char in special_chars:
+                criteria[3] = 1
+                
+        if sum(criteria) == 4 : 
+            return "Strong Password"
+        else:
+            return "Weak Password"
+    except Exception as e:
+         return "Input should only be a string."
+5. Calculate Total Duration of a Playlist
+def calculate_playlist_length(song_durations, skip_list):
+    try:
+        total_seconds = 0
+        for i in range(len(song_durations)):
+            if i not in skip_list:
+                if song_durations[i] < 0:
+                    raise ValueError("Song duration cannot be negative")
+                total_seconds += song_durations[i]
+                
+        hours = total_seconds // 3600
+        minutes = (total_seconds % 3600) // 60
+        seconds = total_seconds % 60
+        
+        return f"{hours:02d}:{minutes:02d}:{seconds:02d}"
+    except Exception as e:
+        return f"Error: {e}"
+6
+Festival Discount Calculator
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+1200.0
+Correct!
+Start project before checking your activities.
+
+7
+Level Sequence Generator
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+16
+Correct!
+Start project before checking your activities.
+
+8
+Phone Number Formatter
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+987
+Correct!
+Start project before checking your activities.
+
+9
+Energy Consumption Calculator
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+[80]
+Correct!
+Start project before checking your activities.
+
+10
+Word Score Calculator
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+13
+Correct!
+Start project before checking your activities.
+
+11
+Temperature Converter
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+212.0
+Correct!
+
+
+12
+Birthday Reminder
+
+Analyze the following code snippet, determine its output, and then enter the result.
+
+
+Preview
+Not soon
+Correct!
+13. Calculate Squares of Numbers
+def square_numbers(numbers):
+    try:
+        squared = []
+        for num in numbers:
+            squared.append(num**2)
+        return squared
+    except Exception as e:
+        return str(e)
+14. Validate List Length
+def validate_length(items, limit):
+    try:
+        if len(items) > limit:
+            return "List is too long"
+        else:
+            return "List is within the limit"
+    except Exception as e:
+        return str(e)
+15. Find Sum of Odd Numbers
+def sum_of_odds(numbers):
+    try:
+        odd_sum = 0
+        for num in numbers:
+            if num % 2 != 0:
+                odd_sum = odd_sum + num
+        return odd_sum
+    except Exception as e:
+        return str(e)
+16. Check Divisibility
+def find_divisible(numbers, divisor):
+    try:
+        if divisor == 0:
+            raise ValueError("Divisor cannot be zero.")
+        result = []
+        for num in numbers:
+            if num % divisor == 0:
+                result.append(num)
+        return result
+    except Exception as e:
+        return str(e)
+17. Calculate Factorials
+def calculate_factorials(numbers):
+    try:
+        from math import factorial
+        factorials = []
+        for num in numbers:
+            factorials.append(factorial(num))
+        return factorials
+            
+    except Exception as e:
+        return str(e)
+Code Activities
+18. Count Words in Strings
+def count_words(sentences):
+    try:
+        if not all(isinstance(sentence, str) for sentence in sentences):
+            raise ValueError("All items in the list must be strings")
+
+        word_counts = []
+        for sentence in sentences:
+            word_counts.append(len(sentence.split()))
+        return word_counts
+    except Exception as e:
+        return str(e)
+      19. Find the Longest Word
+def longest_word(words):
+    try:
+        if not words:
+            raise ValueError("The list of words cannot be empty")
+        return max(words, key=len)
+    except Exception as e:
+        return str(e)
+20. Sort List by Length
+def sort_by_length(strings):
+    try:
+        return sorted(strings, key=len)
+    except Exception as e:
+        return str(e)
+21. Filter Palindromes
+def filter_palindromes(words):
+    palindromes = []
+    try:
+        for word in words:
+            if word == word[::-1]:
+                palindromes.append(word)
+        return palindromes
+    except Exception as e:
+        return str(e)
+22. Compute Cumulative Sums
+def cumulative_sums(numbers):
+    try:
+        cumulative = []
+        current_sum = 0
+        for num in numbers:
+            current_sum += num
+            cumulative.append(current_sum)
+        return cumulative
+    except Exception as e:
+        return str(e)
+23. Generate Multiplication Table
+def multiplication_table(number, range_end):
+
+    multiple_table = []
+
+    try:
+        for i in range(1, range_end + 1):
+            multiple_table.append(number * i)
+
+        return multiple_table
+
+    except Exception as e:
+        return str(e)
+24. Check Prime Numbers
+def check_primes(numbers):
+    try:
+        def is_prime(num):
+            if num < 2:
+                return False
+            for i in range(2, int(num ** 0.5) + 1):
+                if num % i == 0:
+                    return False
+            return True
+
+        return [num for num in numbers if is_prime(num)]
+    except Exception as e:
+        return str(e)
+25. Check Armstrong Number
+def is_armstrong_number(number):
+
+    try:
+        if not isinstance(number, int) or number < 0:
+            raise ValueError("Input must be a non-negative integer")
+
+        digits = list(map(int, str(number)))
+        power = len(digits)
+
+        armstrong_sum = sum(digit ** power for digit in digits)
+
+        return number == armstrong_sum
+    except Exception as e:
+        return str(e)
