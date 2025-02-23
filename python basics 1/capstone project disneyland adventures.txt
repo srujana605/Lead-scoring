@@ -1,0 +1,153 @@
+1.Magical Registration Portal!
+name = 'Alice'
+age = 14
+fav_char = 'Minnie Mouse'
+
+message = f"Welcome to Disneyland {name}!!, Your favorite character {fav_char}, awaits you. Have a magical day!"
+print(message)
+Welcome to Disneyland Alice!!, Your favorite character Minnie Mouse, awaits you. Have a magical day!
+2. The Thrilling Roller Coaster Ride
+height = int(input("Enter your height : "))
+weight = int(input("Enter your weight : "))
+
+if height > 150 and weight > 20:
+             can_ride = True
+else:
+             can_ride = False
+3. Shopping Spree!!
+# Choice 1 : 
+mickey_ears = 30
+# Choice 2 : 
+tiara = 25
+
+def souvenir_shop(budget, choice):
+    try:
+        if choice == 1:
+            if budget >= mickey_ears:
+                return "Mickey Ears purchased"
+            else:
+                return "Insufficient funds for Mickey Ears"
+        elif choice == 2:
+            if budget >= tiara:
+                return "Tiara purchased"
+            else:
+                return "Insufficient funds for Tiara"
+        else:
+            return "Invalid choice"
+    except ValueError:
+        return "Invalid input"
+4. Wish Maker!
+def wish_maker(wish):
+    print("Welcome to the Disneyland Wish Maker!")
+    
+    reversed_wish = ""
+    for char in wish:
+        reversed_wish = char + reversed_wish
+
+    return f"Your magical wish transformation is complete! Your transformed wish is : {reversed_wish}"
+
+wish_maker()# Enter your 'wish'
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[10], line 10
+      6         reversed_wish = char + reversed_wish
+      8     return f"Your magical wish transformation is complete! Your transformed wish is : {reversed_wish}"
+---> 10 wish_maker()# Enter your 'wish'
+
+TypeError: wish_maker() missing 1 required positional argument: 'wish'
+5. Castle Light Show
+def castle_light_show(rows):
+    result = ""
+    for i in range(1,rows + 1):
+        result += f"Row {i}: " + "💡" * i + "\n" 
+    result += "\n🏰 The castle light show has ended! Hope you enjoyed it!"
+    return result
+output = castle_light_show(5)  
+print(output)
+Row 1: 💡
+Row 2: 💡💡
+Row 3: 💡💡💡
+Row 4: 💡💡💡💡
+Row 5: 💡💡💡💡💡
+
+🏰 The castle light show has ended! Hope you enjoyed it!
+6. Mickey's Clock Tower!
+def clock_tower_puzzle(hour, turns):
+    print("🕰️ Welcome to Mickey's Clock Tower! 🕰️")
+    print("Help Mickey fix the magical clock!\n")
+    
+    # Calculate the new hour 
+    new_hour = (hour + turns) % 24
+        
+    return f"The clock started at {hour}:00 .... After {turns} magical turns... The new time is {new_hour}:00! ⏰"
+clock_tower_puzzle(4,5)
+🕰️ Welcome to Mickey's Clock Tower! 🕰️
+Help Mickey fix the magical clock!
+
+'The clock started at 4:00 .... After 5 magical turns... The new time is 9:00! ⏰'
+7. The Magic Aladdin Carpet
+def magic_carpet_ride(size, pattern):
+    result = ""
+    for i in range(size):
+        for j in range(size):
+            if (i + j) % 2 == 0:
+                result += pattern + " "
+            else:
+                result += "❤️ " 
+        result += "\n"
+    return result
+
+output = magic_carpet_ride(5, '☘️')
+print(output)
+☘️ ❤️ ☘️ ❤️ ☘️ 
+❤️ ☘️ ❤️ ☘️ ❤️ 
+☘️ ❤️ ☘️ ❤️ ☘️ 
+❤️ ☘️ ❤️ ☘️ ❤️ 
+☘️ ❤️ ☘️ ❤️ ☘️ 
+
+8. Mickey's Magical Number Transform
+def mickey_math(magic_number):
+    print("🎪 Welcome to Mickey's Mathematical Adventure! 🎪")
+    operations = 0
+    original = magic_number
+    
+    while magic_number != 1:
+       if magic_number % 2 == 0:
+           magic_number = magic_number // 2
+       else:
+           magic_number = (3 * magic_number) + 1
+       operations += 1
+       print(f"Magic transformation #{operations}: {magic_number}")
+        
+       if operations >= 20:
+            print("Oh my! That's quite a magical journey!")
+            break
+    
+    return (f"Your number {original} needed {operations} magical transformations!")
+9. Firework Show
+def firework_design(height, symbol):
+    result = "Welcome to the Firework Design Creator!"
+    result += "\n\n🎆 Your firework is ready! 🎆\n\n"
+
+    # Create upper half of firework
+    for i in range(1, height + 1):
+        result += " " * (height - i) + symbol * (2 * i - 1) + "\n"
+    
+    # Create lower half of firework
+    for i in range(height - 1, 0, -1):
+        result += " " * (height - i) + symbol * (2 * i - 1)
+        if i > 1:
+            result += "\n"
+    
+    return result
+output = firework_design(3,'*') 
+print(output)
+Welcome to the Firework Design Creator!
+
+🎆 Your firework is ready! 🎆
+
+  *
+ ***
+*****
+ ***
+  *
