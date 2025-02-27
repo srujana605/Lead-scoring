@@ -1,0 +1,110 @@
+1
+Which of the following sample has the greatest standard deviation?
+
+a. 98 104 100 101 102
+
+b. 20 4 6 8 10
+
+c. 2 10 5 10
+
+d. 1 5 3 2
+
+
+c
+
+
+b
+
+
+a
+
+
+d
+
+Correct!
+
+
+2
+For the following dataset determine the variance and standard deviation of the Age and Rating.
+
+import pandas as pd
+
+#Create a Dictionary of series
+d = {'Name':pd.Series(['Emma','James','Ricky','Vera','Steve','Smith','Jack',
+   'Eva','Chanchal','Gasper','Maria','Andrew']),
+   'Age':pd.Series([19,26,25,33,30,29,23,34,40,55,25,46]),
+   'Rating':pd.Series([4.29,3.24,3.98,3.56,1.20,2.66,3.8,3.78,2.98,4.80,4.10,3.65])}
+
+#Create a DataFrame
+df = pd.DataFrame(d)
+
+STD : Age = 10.405 and Rating = 0.926
+
+
+VAR : Age = 8.265 and Rating = 1.345
+
+
+VAR : Age = 108.265 and Rating = 0.857
+
+
+STD : Age = 11.402 and Rating = 0.996
+
+Correct!
+
+
+3
+Computing the variance for the Datasaurus Dozen Dataset
+
+The "Datasaurus Dozen" dataset contains 13 datasets, each with a different shape but the same summary statistics. Import the datasaurus.csv using pandas as df.
+
+Once you have imported the dataset, you can compute the variance for each dataset.
+
+
+Preview
+Select the correct statements.
+
+
+The variance is similar for star and dots set
+
+
+All the answer are incorrect
+
+
+The variance is almost similar for all the dataset
+
+
+The highest variance is for the Dino dataset
+
+Correct!
+
+
+4
+Find the standard deviation of the average temperatures recorded over a five-day period last winter
+
+temperature= [18, 22, 19, 25, 12]
+
+
+94.80
+
+
+4.35
+
+
+23.7
+
+Correct!
+
+
+5
+What happens to a variance or standard deviation when a constant is added? What if the variance and standard deviation is multiplied by a constant.
+
+
+Variability increase when a constant is added but multiplying by a constant changes the variability.
+
+
+Variability stays the same when a constant is added but multiplying by a constant changes the variability.
+
+
+Variability decrease when a constant is added but multiplying by a constant changes the variability.
+
+Correct!
