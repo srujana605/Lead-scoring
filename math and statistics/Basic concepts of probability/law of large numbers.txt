@@ -1,0 +1,74 @@
+1
+Couples eating at a restaurant on Valentine’s Day spend an average of $50. Which is more likely?
+
+
+The average amount spent by the next 40 couples is between 
+$
+40
+ and 
+$
+60
+.
+
+
+The average amount spent by the next 10 couples is between 
+$
+40
+ and 
+$
+60
+.
+
+Correct!
+
+
+2
+Casinos and the Law of Large Numbers
+
+Casinos often rely on the Law of Large Numbers to ensure their profitability. Which of the following statements accurately describes the relationship between casinos and the Law of Large Numbers?
+
+
+Casinos manipulate the Law of Large Numbers to guarantee that players will consistently lose money.
+
+
+Casinos rely solely on luck and chance, without considering the Law of Large Numbers.
+
+
+Casinos leverage the Law of Large Numbers by offering a large number of games or bets, allowing the actual results to converge to the expected outcomes dictated by the house edge.
+
+
+The Law of Large Numbers has no relevance to the profitability of casinos.
+
+Correct!
+
+
+3
+Average temperature in a city
+
+The average temperature in a city during the summer months is 80 degrees Fahrenheit. Which is more likely?
+
+
+The average temperature tomorrow will be between 75 and 85 degrees Fahrenheit.
+
+
+The average temperature tomorrow will be between 70 and 80 degrees Fahrenheit.
+
+Correct!
+Start project before checking your activities.
+
+Practice:
+Let's write a Python function that demonstrates the Law of Large Numbers.
+
+Function Signature:
+
+import random
+
+def law_of_large_numbers(n: int) -> float:
+    total_sum = 0
+
+    for _ in range(n):
+        random_number = random.random()
+        total_sum += random_number
+
+    average = total_sum / n
+    return average
