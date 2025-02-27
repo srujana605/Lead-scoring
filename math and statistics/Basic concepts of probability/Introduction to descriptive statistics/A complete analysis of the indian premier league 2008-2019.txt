@@ -1,0 +1,48 @@
+1
+Calculate the first, second and third quantile of the variable average
+
+
+Q1= 1.5, Q2= 14.60 and Q3= 35.98
+
+
+Q1= 8.0, Q2= 14.60 and Q3= 23.65
+
+
+Q1= 1.5, Q2= 8.0and Q3= 35.98
+
+
+Q1= 8.0, Q2= 14.60 and Q3= 35.98
+
+Correct!
+
+
+2
+Plot a box-plot to identify potential outliers for the variable average
+
+Select the correct code.
+
+
+sns.boxplot(data=data,y='strikerate')
+
+sns.boxplot(data=data,hue='average')
+
+sns.boxplot(data=data,y='average')
+Correct!
+
+
+3
+Look for any data points that fall outside the whiskers of the boxplot, which represent the range of data within 1.5 times the interquartile range (IQR) above the upper quartile or below the lower quartile. Filter the dataset using the interquartile range for the variable 'average' and calculate the number of rows in the filtered dataframe.
+
+
+rows= 478
+
+
+rows= 465
+
+
+rows= 479
+
+
+rows= 482
+
+Correct!
