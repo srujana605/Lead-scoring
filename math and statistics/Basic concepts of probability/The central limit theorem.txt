@@ -1,0 +1,87 @@
+1
+The lifetimes of a certain type of electronic component follow an exponential distribution with a mean of 1000 hours. A random sample of 50 components is taken from this population. Which of the following statements about the sampling distribution of the sample mean is most likely to be true, according to the Central Limit Theorem (CLT)?
+
+
+The mean of the sample means will be exactly 1000 hours.
+
+
+The sampling distribution of the sample mean will be approximately normally distributed.
+
+
+The standard deviation of the sample means will be close to zero.
+
+
+The sampling distribution of the sample mean will be exactly normally distributed.
+
+Correct!
+
+
+2
+The scores of students on a certain exam follow a uniform distribution between 60 and 80. A random sample of 100 students is taken from this population. Which of the following statements about the sampling distribution of the sample mean is most likely to be true, according to the Central Limit Theorem (CLT)?
+
+
+The sampling distribution of the sample mean will be exactly uniformly distributed.
+
+
+The mean of the sample means will be exactly 70.
+
+
+The sampling distribution of the sample mean will be approximately normally distributed.
+
+
+The standard deviation of the sample means will be close to zero.
+
+Correct!
+
+
+Quiz
+3
+The average weight of a water bottle is 30 kg, with a standard deviation of 1.5 kg. If a sample of 45 water bottles is selected at random from a consignment and their weights are measured, find the probability that the mean weight of the sample is less than 28 kg.
+
+
+0.2981
+
+
+0.3828
+
+
+0.7860
+
+
+0.0000
+
+Correct!
+Start project before checking your activities.
+
+4
+Suppose the heights of adult males in a population follow a normal distribution with a mean of 175 cm and a standard deviation of 6 cm. If a random sample of 100 adult males is taken from this population, what is the approximate probability that the mean height of the sample is between 174 cm and 176 cm?
+
+Please note that this question assumes the CLT applies, meaning that the sample size is sufficiently large for the sampling distribution of the sample mean to be approximately normal, regardless of the shape of the population distribution.
+
+
+0.7098
+
+
+0.9040
+
+Correct!
+
+
+5
+The record of weights of the female population follows a normal distribution. Its mean and standard deviation are 65 kg and 14 kg, respectively. If a researcher considers the records of 50 females, then what would be the standard deviation of the chosen sample?
+
+
+4.98 kg
+
+
+3.98 kg
+
+
+1.955 kg
+
+
+1.98 kg
+
+Correct!
+
+
