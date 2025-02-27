@@ -1,0 +1,102 @@
+1
+What best describes the relationship between theoretical and experimental probabilities as the number of trials in an experiment increases?
+
+
+The experimental probability tends to converge towards the theoretical probability.
+
+
+The experimental probability becomes less predictable.
+
+
+The experimental probability diverges from the theoretical probability.
+
+
+The theoretical probability changes to match the experimental probability.
+
+Correct!
+
+
+Practice
+Let's explore another example to understand experimental probability better: rolling a die and calculating the probability of getting a specific number, say 4. This example will further demonstrate how experimental probability compares to theoretical probability with a different kind of random event.
+
+2
+Calculate the theoretical probability of rolling a 4 with a fair six-sided die.
+
+
+1/4
+
+
+1/6
+
+
+1/2
+
+
+1
+
+Correct!
+
+
+3
+Now, let's simulate rolling a die multiple times and calculate the experimental probability of getting a 4.
+
+Use the following code to simulate the experiment, repeating it 1000 times.
+
+Use the variable experimental_probability to save the output of your experiment.
+
+import random
+
+def roll_die():
+    """Simulate rolling a six-sided die."""
+    return random.randint(1, 6)
+
+def simulate_rolls(number_of_rolls):
+    """Simulate rolling a die multiple times and calculate experimental probability of getting a 4."""
+    count_of_4s = 0
+
+    for _ in range(number_of_rolls):
+        if roll_die() == 4:
+            count_of_4s += 1
+
+    experimental_probability_of_4 = count_of_4s / number_of_rolls
+    return experimental_probability_of_4
+Correct!
+
+
+4
+A standard deck of cards has 52 cards, divided into four suits: Hearts, Diamonds, Clubs, and Spades, with each suit having 13 cards (Ace through King).
+
+Let's simulate this experiment to find the experimental probability of drawing a Heart from the deck.
+
+Use the following code to simulate the experiment, repeating it 1000 times.
+
+Use the variable experimental_probability to save the output of your experiment.
+
+import random
+
+def create_deck():
+    """Create a standard 52-card deck."""
+    suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
+    values = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace']
+    deck = [{'suit': suit, 'value': value} for suit in suits for value in values]
+    return deck
+
+def draw_card(deck):
+    """Draw a random card from the deck."""
+    return random.choice(deck)
+
+def simulate_draws(number_of_draws):
+    """Simulate drawing a card multiple times and calculate the experimental probability of drawing a Heart."""
+    heart_count = 0
+    deck = create_deck()
+
+    for _ in range(number_of_draws):
+        drawn_card = draw_card(deck)
+        if drawn_card['suit'] == 'Hearts':
+            heart_count += 1
+
+    experimental_probability_hearts = heart_count / number_of_draws
+    return experimental_probability_hearts
+Correct!
+
+
