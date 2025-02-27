@@ -1,0 +1,461 @@
+Normal distribution is perhaps the most frequently used statistical term after the mean.
+
+The normal distribution was introduced by the French mathematician Abraham DeMoivre in 1733, who used it to approximate probabilities associated with binomial random variables when the binomial parameter n is large. This result was later extended by Laplace and others and is now encompassed in a probability theorem known as the central limit theorem, which is discussed in a few lesson.
+
+Definition.
+
+For reals −∞ < 
+μ
+ < ∞ and 
+σ
+ > 0, the normal distribution (or Gaussian distribution) denoted N(
+μ
+, 
+σ
+2
+), with mean 
+μ
+ and variance 
+σ
+2
+ is a continuous random variable with probability density function.
+
+f
+(
+x
+)
+=
+1
+σ
+√
+2
+π
+e
+−
+(
+x
+−
+μ
+)
+2
+/
+(
+2
+σ
+2
+)
+ −∞ < 
+x
+ < ∞
+
+Let's simulate an example:
+
+import numpy as np
+from scipy.stats import norm
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# A simplistic way to do it 
+x = np.linspace(-10,10,100)
+fig, ax = plt.subplots()
+nd = norm.pdf(x)              # get the norm.pdf for x interval 
+ax.plot(x,nd,label='stdv=0.05' ) 
+ax.set_xlabel('x')
+ax.set_ylabel('pdf(x)')
+ax.set_title('Normal Distribution')
+ax.legend(loc='best', frameon=True)
+ax.grid(True)
+
+Preview
+Normal distribution PDF with different standard deviations
+
+Let’s plot the probability distribution functions of a normal distribution where the mean has different standard deviations.
+
+fig, ax = plt.subplots()
+x = np.linspace(-10,10,100)
+stdvs = [1.0, 2.0, 3.0, 4.0]
+for s in stdvs:
+    ax.plot(x, norm.pdf(x,scale=s), label='stdv=%.1f' % s)
+
+ax.set_xlabel('x')
+ax.set_ylabel('pdf(x)')
+ax.set_title('Normal Distribution')
+ax.legend(loc='best', frameon=True)
+ax.set_ylim(0,0.45)
+ax.grid(True)
+
+Preview
+Some usefull results concerning a normal distribution are summarized bellow. For any normal distribution,
+
+P
+(
+μ
+−
+σ
+<
+X
+<
+μ
++
+σ
+)
+=
+0.6827
+
+P
+(
+μ
+−
+2
+σ
+<
+X
+<
+μ
++
+2
+σ
+)
+=
+0.9545
+
+P
+(
+μ
+−
+3
+σ
+<
+X
+<
+μ
++
+3
+σ
+)
+=
+0.9973
+
+Almost 68% of the data falls within a distance of one standard deviation from the mean on either side and 95% within two standard deviations.
+
+Also, from the symmetry fo 
+f
+(
+x
+)
+,
+P
+(
+X
+>
+μ
+)
+=
+P
+(
+X
+<
+μ
+)
+=
+0.5
+
+If 
+X
+ is a normal random variable with parameters 
+μ
+ = 8 and 
+σ
+ = 3.
+
+We illustrate the normal distribution and the required area in the Figure below. The area under the curve for the interval 
+(
+μ
+−
+σ
+,
+μ
++
+σ
+)
+is shaded.
+
+x_min = 0.0
+x_max = 16.0
+
+mean = 8.0 
+std = 3.0
+
+x = np.linspace(x_min, x_max, 100)
+
+y = norm.pdf(x,mean,std)
+
+plt.plot(x,y, color='black')
+
+#----------------------------------------------------------------------------------------#
+# fill area 1
+
+pt1 = mean + std
+plt.plot([pt1 ,pt1 ],[0.0,norm.pdf(pt1 ,mean, std)], color='black')
+
+pt2 = mean - std
+plt.plot([pt2 ,pt2 ],[0.0,norm.pdf(pt2 ,mean, std)], color='black')
+
+ptx = np.linspace(pt1, pt2, 10)
+pty = norm.pdf(ptx,mean,std)
+
+plt.fill_between(ptx, pty, color='#0b559f', alpha=0.5)
+
+Preview
+1
+Let equal the IQ of a randomly selected Datawars student. Assume 
+X
+ ~ 
+N
+(
+100
+,
+16
+2
+)
+ What is the probability that a randomly selected student has an IQ below 90?
+
+Use the scipy library.
+
+
+0.734
+
+
+0.266
+
+Correct!
+
+
+The Standard Normal Distribution
+Definition
+
+A normal random variable with
+
+μ
+=
+0
+ and 
+σ
+2
+=
+1
+
+is called a Standard normal variable and is denoted as Z.
+
+The cumulative distribution function of a Standard normal variable is denoted ad,
+
+ϕ
+(
+z
+)
+=
+P
+(
+Z
+≤
+z
+)
+
+2
+Assume that Z has a standard normal distribution. Determine 
+P
+(
+Z
+>
+1.26
+)
+
+
+0.103
+
+
+0.89
+
+Correct!
+
+
+3
+Assume that Z has a standard normal distribution. Determine 
+P
+(
+Z
+>
+−
+0.86
+)
+
+
+0.805
+
+
+0.19
+
+Correct!
+
+
+Z-score
+Definition
+
+If 
+X
+ is a normal random variable with 
+E
+(
+X
+)
+=
+μ
+ and 
+V
+A
+R
+(
+X
+)
+=
+σ
+2
+, the random variable
+
+Z
+=
+(
+¯
+X
+−
+μ
+)
+σ
+
+Now 
+Z
+ has a standard normal distribution, with 
+E
+(
+Z
+)
+=
+0
+ and 
+V
+A
+R
+(
+Z
+)
+=
+1
+.
+
+
+Preview
+Let's calculate the Z-SCORE for an example.
+
+mu, sigma = 10, 0.05
+x = np.random.normal(mu, sigma, 100000)
+# Calculate stats using single sample
+sample_mean = np.mean(x)
+sample_stdev = np.var(x)**0.5
+# Calculate standard error
+std_error = sample_stdev/(x.shape[0])**0.5
+# Infer distribution using single sample
+z = (x-sample_mean) / std_error
+
+# Plot histogram of inferred distribution
+group_labels = ['The Standard Normal Distribution']
+colors = ['magenta']
+
+fig, ax = plt.subplots()
+             # get the norm.pdf for x interval 
+ax.hist(z) 
+ax.set_xlabel('z')
+ax.set_ylabel('Frequency')
+ax.set_title('Standard Normal Distribution')
+ax.legend(loc='best', frameon=True)
+ax.grid(True)
+Definition
+
+Suppose 
+X
+ is a normal variable with mean 
+μ
+ and variance 
+σ
+2
+. Then
+
+P
+(
+X
+≤
+x
+)
+=
+P
+(
+(
+X
+−
+μ
+)
+σ
+≤
+(
+x
+−
+μ
+)
+σ
+)
+)
+=
+P
+(
+Z
+≤
+z
+)
+
+where Z is a standard normal distribution, and 
+z
+=
+(
+x
+−
+μ
+)
+σ
+)
+ is the z-value obtained by standardizing x.
+
+4
+If X is a normal random variable with parameters 
+μ
+ = 3 and 
+σ
+2
+ = 9, find 
+P
+(
+2
+<
+X
+<
+5
+)
+
+
+0.74
+
+
+0.37
+
+
+0.36
+
+Correct!
