@@ -1,0 +1,444 @@
+1
+Suppose 
+X
+ has a continuous uniform distribution over the interval [1.5,5.5] What is 
+P
+(
+X
+<
+2.5
+)
+?
+
+
+0.50
+
+
+0.45
+
+
+0.25
+
+
+0.55
+
+Correct!
+
+
+2
+If 
+X
+ is uniformly distributed over (0, 10), calculate the probability that X < 3
+
+
+0.5
+
+
+0.3
+
+
+1
+
+
+0.4
+
+Correct!
+
+  
+3
+If 
+X
+ is uniformly distributed over (0, 10), calculate the probability that X > 6
+
+
+0.2
+
+
+0.3
+
+
+1
+
+
+0.4
+
+Correct!
+
+
+4
+A car technician finds that the amount of time a repairman needs to fix engine is uniformly distributed between 1.5 and 4 hours. Let x = the time needed to fix the engine.
+
+Find the probability that a randomly selected engine repair requires more than two hours.
+
+
+0.8
+
+
+0.9
+
+
+0.7
+
+
+0.6
+
+Correct!
+
+
+5
+A car technician finds that the amount of time a repairman needs to fix engine is uniformly distributed between 1.5 and 4 hours. Let x = the time needed to fix the engine.
+
+Find the probability that a randomly selected engine repair requires less than three hours.
+
+
+0.8
+
+
+0.6
+
+
+0.9
+
+
+0.7
+
+Correct!
+
+  
+Mean and Variance
+Definition
+
+If X is a continuous uniform random variable,
+
+μ
+=
+E
+(
+X
+)
+=
+(
+a
++
+b
+)
+/
+2
+ and 
+σ
+²
+=
+V
+A
+R
+(
+X
+)
+=
+(
+a
+−
+b
+)
+²
+/
+12
+
+6
+Suppose 
+X
+ has a continuous uniform distribution over the interval [1.5,5.5] Determine the mean, variance and the standard deviation of 
+X
+.
+
+
+E(x)= 3.5, VAR (X) =1.33 and STD(X)= 1.15
+
+
+E(x)= 3.5, VAR (X) =1.54 and STD(X)= 1.33
+
+
+E(x)= 1.5, VAR (X) =1.33 and STD(X)= 1.54
+
+Correct!
+Start project before checking your activities.
+
+7
+The following data are 55 smiling times, in seconds, of an eight-week-old baby.
+
+smile = [10.4,19.6,18.8,13.9,17.8,
+16.8,21.6,17.9,12.5,11.1,4.9,12.8,
+14.8,22.8,20.0,15.9,16.3,13.4,17.1,
+14.5,19.0,22.8,1.3,0.7,8.9,11.9,10.9,
+7.3,5.9,3.7,17.9,19.2,9.8,5.8,6.9,
+2.6,5.8,21.7,11.8,3.4,2.1,4.5,6.3,
+10.7,8.9,9.4,9.4,7.6,10.0,3.3,6.7,
+7.8,11.6,13.8,18.6]
+Calculate the sample and theoretical mean and the standard deviation.
+
+Are the theoretical and standard deviation close to the sample mean and standard deviation?
+
+
+No
+
+
+Yes
+
+Correct!
+Start project before checking your activities.
+
+Bus delay: Example with python
+Let's simulate the dataset related to bus delays using a uniform distribution involves generating random data that is evenly spread out across a certain range. This means that every value within the specified range is equally likely to occur. Below is an example of how you might structure and generate such a dataset using Python's numpy library for the simulation. This example assumes you want to simulate delays for 100 buses on a particular route.
+
+Assumptions
+Delays range from 1 to 5 minutes.
+We want to simulate delays for 100 bus instances.
+The dataset includes bus ID, scheduled time, actual arrival time, and delay in minutes.
+Let's run the following code in your notebook:
+
+# Simulating the dataset 
+np.random.seed(42)  # For reproducibility
+bus_delay = pd.DataFrame({
+    'Bus Trip ID': range(1, 101),
+    'Delay Time': np.round(np.random.uniform(1, 5, 100), 2)
+})
+
+plt.figure(figsize=(10, 6))
+
+# Plot the histogram for Delay Time column in bus_delay DataFrame
+sns.histplot(bus_delay["Delay Time"], kde=False, color='darkgreen', stat='density', linewidth=0)
+
+# Adding a horizontal line at y=1/4 (25% probability)
+plt.axhline(1 / 4, color="red", linestyle='--', linewidth=2)
+
+# Remove left and bottom spines to eliminate the box just for better visual
+sns.despine(left=True, bottom=True)
+
+# Set labels and title
+plt.xlabel("Bus delay in minutes", fontsize=14, color='darkgreen')
+plt.ylabel("Density", fontsize=14, color='darkgreen')  
+plt.title("Data Distribution", fontsize=18, color='darkgreen')
+
+# Set the color of tick labels on both axes
+plt.xticks(color='orange')
+plt.yticks(color='orange')
+
+# Display the plot
+plt.show()
+
+Preview
+Graphical representation of Uniform Distribution would appear as a flat, constant line, indicating that each value has the same chance of being observed. Looking at our graph, it’s evident that it doesn’t precisely form a rectangle. However, we can still consider it as uniform & suitable for analysis and further work.
+
+Now, we will compute the Cumulative Distribution Function (CDF) and Probability Density Function (PDF) using the uniform.cdf and uniform.pdf functions, respectively.
+
+from scipy.stats import uniform
+# Define the parameters of the uniform distribution
+a = 1 # Lower bound
+b = 5 # Upper bound
+
+# Calculate the CDF & PDF for x<=2.44
+x = 2.44
+cdf_value = uniform.cdf(x, loc=a, scale=(b-a))
+
+pdf_value = uniform.pdf(x, loc=a, scale=(b-a))
+
+# Print the results
+print(f"The CDF for x={x} in the uniform distribution is: {cdf_value}")
+
+print(f"The PDF in the uniform distribution is: {pdf_value}")
+Now, let’s plot the CDF for the value 2.44.
+
+plt.figure(figsize=(10, 6))
+
+# extracting Delay Time column
+delay_data = bus_delay["Delay Time"]
+highlight_value = 2.44
+
+# Create bins and assigning histogram values
+hist_values, bin_edges = np.histogram(delay_data, bins=30, density=True)
+
+# Plot histogram bars & color respective bars
+for edge, value in zip(bin_edges[:-1], hist_values):
+    if edge <= highlight_value:
+        color = '#FF6666' #red
+    else:
+        color = '#009900' #green
+    plt.bar(edge, value, width=np.diff(bin_edges)[0], color=color, alpha=1, align='edge', edgecolor='none')
+
+# Highlight the value 2.32 with a red dashed line
+plt.axvline(highlight_value, color='red', linestyle='--', linewidth=2)
+
+# Add a horizontal line at y=1/4 (25% probability)
+plt.axhline(1 / 4, color="red", linestyle='--', linewidth=2)
+
+#Add 2.32 label on X axis to indicate x value
+plt.text(highlight_value, 0, str(highlight_value), color='red', ha='center', va='top', fontsize=10)
+
+# Add a text annotation for CDF value at x ≤ 2.44
+plt.text(highlight_value, 0.05, "≈ CDF = 0.36", color='orange', ha='left', va='bottom', fontsize=12, rotation='vertical')
+
+
+# Remove left and bottom spines to eliminate the box just for better visual
+sns.despine(left=True, bottom=True)
+
+# Set labels and title
+plt.xlabel("Bus delay in minutes", fontsize=14, color='darkgreen')
+plt.ylabel("Density", fontsize=14, color='darkgreen') 
+plt.title("CDF for x≤2.32", fontsize=18, color='#FF6666')
+
+# Set the color of tick labels on both axes
+plt.xticks(color='orange')
+plt.yticks(color='orange')
+
+# Display the plot
+plt.show()
+
+Preview
+It indicates that there is a probability of around 36% that a randomly chosen bus will experience a delay of at most 2.44 minutes.
+
+Let's find the probability for example the delay is at least for 3.1 minutes, you can use: 
+P
+(
+X
+≥
+3.1
+)
+=
+1
+−
+P
+(
+X
+<
+3.1
+)
+ :
+
+P
+(
+X
+≥
+3.1
+)
+=
+1
+−
+P
+(
+X
+<
+3.1
+)
+=
+1
+−
+(
+3.1
+−
+1
+)
+/
+(
+5
+−
+1
+)
+=
+0.475
+
+We can visually represent it, where the red region corresponds to P(X≥3.1).
+
+plt.figure(figsize=(10, 6))
+
+# extracting Delay Time column
+delay_data = bus_delay["Delay Time"]
+highlight_value = 3.1
+
+# Create bins and assigning histogram values
+hist_values, bin_edges = np.histogram(delay_data, bins=55, density=True)
+
+# Plot histogram bars
+for edge, value in zip(bin_edges[:-1], hist_values):
+    if edge <= highlight_value:
+        color = '#009900' # green
+    else:
+        color = '#FF6666' # red
+    plt.bar(edge, value, width=np.diff(bin_edges)[0], color=color, alpha=1, align='edge', edgecolor='none')
+
+# Highlight the value 3.1 with a red dashed line
+plt.axvline(highlight_value, color='red', linestyle='--', linewidth=2)
+
+# Add a horizontal line at y=1/4 (25% probability)
+plt.axhline(1 / 4, color="red", linestyle='--', linewidth=2)
+
+# Add a text annotation for x value on x axis
+plt.text(highlight_value, 0, str(highlight_value), color='red', ha='center', va='top', fontsize=10)
+
+# Add a text annotation for CDF value at x >= 3.1
+plt.text(highlight_value, 0.05, "≈ CDF = 0.475", color='orange', ha='left', va='bottom', fontsize=12, rotation='vertical')
+
+# Remove left and bottom spines to eliminate the box
+sns.despine(left=True, bottom=True)
+
+# Set labels and title
+plt.xlabel("Bus delay in minutes", fontsize=14, color='darkgreen')
+plt.ylabel("Density", fontsize=14, color='darkgreen')
+plt.title("CDF for x≥3.1", fontsize=18, color='red')
+
+# Set the color of tick labels on both axes
+plt.xticks(color='orange')
+plt.yticks(color='orange')
+
+# Display the plot
+plt.show()
+
+Preview
+Now, let's answer the following questions:
+
+8
+Find the probability for which the delay is at least 2.1 minutes
+
+
+0.275
+
+
+0.725
+
+Correct!
+Start project before checking your activities.
+
+9
+Find the probability for the equal to 4.1
+
+
+0
+
+
+Incorrect answer
+
+
+0.77
+
+
+0.225
+
+Correct!
+Start project before checking your activities.
+
+10
+Find the probability for P(X<=4.1)
+
+
+0.77
+
+
+0
+
+
+0.225
+
+
+1
+
+Correct!
+Start project before checking your activities.
