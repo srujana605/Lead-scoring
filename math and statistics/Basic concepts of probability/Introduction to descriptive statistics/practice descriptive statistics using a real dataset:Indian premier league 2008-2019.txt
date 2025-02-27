@@ -1,0 +1,130 @@
+1
+Did you find any missing value in the deliveries dataset?
+
+
+No, data does not contain missing values
+
+
+Yes, there is 95% of missing values in three variables for the deliveries dataset
+
+Correct!
+Start project before checking your activities.
+
+2
+Compute the average runs scored by each team during IPL 2008 - 2019 for the First Batting
+
+help: deliveries.inning equal to 1 to filter the first batting
+
+
+The average value for Rising Pune Supergiant is 162
+
+
+The average value for Kochi Tuskers Kerala is 144
+
+
+The average value for Sunrisers Hyderabad is 162
+
+
+The average value for Gujarat Lions is 148
+
+Correct!
+Start project before checking your activities.
+
+3
+Compute the mean, median and mode of the variable win_by_runs
+
+win_by_runs columns represent the margin in which a team has won against the opponent if the team batting first has won. Let's exclude all instances when win_by_runs = 0 and then compute the mean, median, and mode.
+
+
+mean = 29.79, median= 22 and mode= 14
+
+
+mean = 22, median=39 and mode = 15
+
+
+mean = 25, median=31 and mode = 15
+
+Correct!
+Start project before checking your activities.
+
+4
+Compute the mean and standard deviation of win_by_wickets
+
+Exclude all instances when win_by_wickets <= 0.
+
+
+mean = 7.26 and std= 0.82
+
+
+mean = 16.23 and std= 2.82
+
+
+mean = 6.23 and std= 1.82
+
+
+mean = 3.35 and std= 3.38
+
+Correct!
+Start project before checking your activities.
+
+IPL
+In the previous activities, we introduced the dataset and attempted to summarize it using descriptive statistics.
+
+As part of the data analysis team, it is crucial to ask questions and find answers to them. In the following activities, we will attempt to identify some of the most important questions that will help us draw significant conclusions from our dataset. For instance, we will examine which cities host the highest number of matches.
+
+Let's plot the number of matches played in each city. To achieve this, we must first tally the number of matches per city.
+
+cities = matches.groupby('city')[['id']].count()
+# it will rename the 'id' column,and inplace=True makes the changes permanent
+cities.rename(columns={'id':'matches'},inplace=True)
+
+#it will sort the data in ascending order of matches played in each city
+#reset_index() is use to reset the index starting from 0
+cities = cities.sort_values('matches',ascending=False).reset_index()
+
+#To start the index with 1
+cities.index=np.arange(1,len(cities)+1)
+Based on this information plot the the number of matches played in each city as the figure bellow:
+
+
+Preview
+From above bar plot it seems that Mumbai is the favourite location for IPL matches where maximum number of matches had been played followed by Bengaluru,kolkata and delhi.
+
+Based on previous example answer the next questions:
+
+5
+Which Venue(Stadium) has hosted the most number of matches?
+
+
+M. Chinnaswamy Stadium
+
+
+Kingsmead
+
+
+Eden Gardens
+
+
+Sawai Mansingh Stadium
+
+Correct!
+Start project before checking your activities.
+
+6
+In which season most number of matches had been played ?
+
+
+2018
+
+
+2019
+
+
+2013
+
+
+2008
+
+Correct!
+Start project before checking your activities.
+
