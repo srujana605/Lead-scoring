@@ -1,0 +1,201 @@
+1
+The median is equal to which percentile?
+
+
+P_75
+
+
+P_95
+
+
+P_50
+
+
+P_25
+
+Correct!
+
+
+Compute Quantiles
+The code bellow will output the values of the first quartile (Q1), second quartile (Q2 or median), and third quartile (Q3) for the example dataset [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+
+# Example dataset
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# Sorting the data
+sorted_data = sorted(data)
+
+# Computing quartiles
+n = len(sorted_data)
+q1_index = (n-1)//4
+q2_index = (n-1)//2
+q3_index = 3*(n-1)//4
+
+q1 = sorted_data[q1_index]
+q2 = sorted_data[q2_index]
+q3 = sorted_data[q3_index]
+
+# Outputting the results
+print("First quartile (Q1):", q1)
+print("Second quartile (Q2/Median):", q2)
+print("Third quartile (Q3):", q3)
+Let's use numpy to compute the quantiles
+
+import numpy as np
+# Computing quartiles
+q1 = np.quantile(data, 0.25)
+q2 = np.quantile(data, 0.5)   # same as median
+q3 = np.quantile(data, 0.75)
+
+# Outputting the results
+print("First quartile (Q1):", q1)
+print("Second quartile (Q2/Median):", q2)
+print("Third quartile (Q3):", q3)
+2
+Find the quartiles of the data set: [1.10,1.21,1.34, 1.47, 1.36, 1.36, 1.34, 1.43, 1.27 ,1.48 ,1.37, 1.43, 1.39]
+
+
+Third quartile (Q3): 1.21
+
+
+First quartile (Q1): 1.34
+
+
+First quartile (Q1): 1.36
+
+
+Third quartile (Q3): 1.39
+
+Correct!
+
+
+Box-Plot
+Box-plot
+A box plot, also known as a box-and-whisker plot, is a graphical summary of a dataset based on five key summary statistics: the minimum, the first quartile (Q1), the median (Q2), the third quartile (Q3), and the maximum. It is a way to visualize the distribution of a dataset and to identify any outliers.
+
+Box plots are useful for comparing distributions between different groups or for comparing the same variable at different points in time. They provide a visual summary of the dataset that includes information about the spread, the central tendency, and any outliers.
+
+Let's see an example:
+
+import seaborn as sns
+
+data=[1.10,1.21,1.34, 1.47, 1.36, 1.36, 1.34, 1.43, 1.27 ,1.48 ,1.37, 1.43, 1.39]
+sns.boxplot(data)
+
+Preview
+The lines on the ends of the central box are called “whiskers,” and box plots are sometimes called box-and-whisker plots
+
+The horizontal line through the box is 
+Q
+2
+.
+
+The rectangle, called the box, extends from 
+Q
+1
+ to 
+Q
+3
+ along the measurement scale, and thus its height is the interquartile range.
+
+While all versions of box plots show 
+Q
+1
+,
+Q
+2
+, and 
+Q
+3
+, there are different versions of the whiskers.
+
+Interquartile Range
+The interquartile range (IQR) is a measure of the spread or dispersion of a dataset, and it is defined as the difference between the third quartile (Q3) and the first quartile (Q1). In other words, it is the range of the middle 50% of the data.
+
+The IQR is a robust statistic because it is not influenced by extreme values or outliers in the dataset. It is used to identify the spread of the middle 50% of the data and to identify any potential outliers.
+
+To calculate the IQR, one must first compute the values of the first and third quartiles (Q1 and Q3) of the dataset. Then, the IQR can be computed as:
+
+I
+Q
+R
+=
+Q
+3
+−
+Q
+1
+
+Activity
+The following five data sets give the test scores (out of 100) for five different classes in a school:
+
+Class A: 78, 82, 85, 88, 90, 92, 93, 95, 98
+
+Class B: 62, 65, 68, 72, 75, 77, 81, 84, 88, 90
+
+Class C: 70, 72, 74, 76, 78, 80, 82, 84, 86, 88
+
+Class D: 55, 60, 65, 70, 75, 80, 85, 90, 95, 100
+
+Class E: 85, 88, 89, 90, 92, 93, 94, 96, 98, 100
+
+3
+Calculate the first,second and third quartile for Class B.
+
+
+Q1:69.0, Q2:86.0 and Q3: 100
+
+
+Q1:69.0, Q2:74.0 and Q3: 86.0
+
+
+Q1:65.0, Q2:76.0 and Q3: 83.25
+
+
+Q1:69.0, Q2:76.0 and Q3: 83.25
+
+Correct!
+Start project before checking your activities.
+
+4
+Calculate the interquartile range and determine the position of the outlier thresholds for Class A
+
+
+8
+
+
+5
+
+
+95
+
+
+85
+
+Correct!
+
+
+5
+Draw a box-plot for each data set.
+
+Select the correct code.
+
+
+fig1, ax1 = plt.subplots()
+ax1.set_title('Basic Plot')
+ax1.boxplot([ClassA,ClassB,ClassC,ClassD,ClassE])
+plt.yticks([1, 2, 3,4], ['A', 'B', 'C','D','E'])
+plt.show()
+
+fig1, ax1 = plt.subplots()
+ax1.set_title('Basic Plot')
+ax1.boxplot([ClassA,ClassB,ClassC,ClassD,ClassE],vert=False)
+plt.yticks([1, 2, 3,4,5], ['A', 'B', 'C','D','E'])
+plt.show()
+
+fig1, ax1 = plt.subplots()
+ax1.set_title('Basic Plot')
+ax1.boxplot(ClassA,ClassB,ClassC,ClassD)
+plt.yticks([1, 2, 3,4], ['A', 'B', 'C','D'])
+plt.show()
+Correct!
