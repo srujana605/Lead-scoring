@@ -1,0 +1,87 @@
+1
+Decide whether a continuous (C) random variable is the best for each of the following variables:
+
+
+Number of heads when flipping three coins.
+
+
+The temperature of a cup of coffee served at a restaurant.
+
+
+The time until a projectile returns to Earth.
+
+
+The volume of gasoline that is lost to evaporation during the filling of a gas tank.
+
+Correct!
+
+
+2
+Identify the type of random variable and the set of possible values for each random variable. (Make a reasonable estimate based on experience, where necessary.)
+
+The number of heads in two tosses of a coin.
+
+
+Continuous random variables
+
+
+Discrete random variables
+
+Correct!
+
+
+3
+Identify the type of random variable and the set of possible values for each random variable. (Make a reasonable estimate based on experience, where necessary.)
+
+The amount of liquid in a 12 -ounce can of soft drink.
+
+
+Discrete random variables
+
+
+Continuous random variables
+
+Correct!
+
+
+In some cases, the random variable X is actually discrete but, because the range of possible values is so large, it might be more convenient to analyze X as a continuous random variable.
+
+Example 1: Define X to be 1 if a bead is blue and red otherwise.
+
+import numpy as np
+
+x = np.array(["red", "blue"])
+beads=np.repeat(x, [2, 3], axis=0)
+
+def beads_x():
+    sample=np.random.choice(beads)
+    if sample=="blue":
+        x=1
+    else:
+        x=0
+    return x
+Here X is a random variable: every time we select a new bead the outcome changes randomly.
+
+beads_x()
+4
+Consider a game where a fair six-sided die is rolled.
+
+Complete the function and run it in the notebook. The function should return a random integer between 1 and 6 (both inclusive).
+
+import numpy as np
+
+def roll_die():
+    pass  # Generates a random integer between 1 and 6 (inclusive)
+Correct!
+
+
+5
+Consider a scenario where a coin is flipped.
+
+Complete the function and execute it in the notebook. The function should return 0 or 1.
+
+import numpy as np
+
+def flip_coin():
+    pass  # Returns 1 if the outcome is heads, 0 otherwise
+Correct!
