@@ -1,0 +1,287 @@
+1
+How do you calculate the Size of a Sample Space?
+
+
+By summing the probabilities of all events
+
+
+By dividing the total number of outcomes by the number of events
+
+
+By taking the mean of the outcomes
+
+
+The size of a sample space is determined by counting the number of distinct and equally likely outcomes in a given experiment.
+
+Correct!
+
+
+2
+What is the sample space for rolling a fair four-sided die?
+
+
+{1, 2, 3, 4, 5}
+
+
+{1, 2}
+
+
+{1, 2, 3}
+
+
+{1, 2, 3, 4}
+
+Correct!
+
+
+3
+When flipping a fair coin twice, what is the size of the sample space?
+
+
+3
+
+
+1
+
+
+2
+
+
+4
+
+Correct!
+
+
+4
+In a standard deck of playing cards, what is the size of the sample space when drawing a single card?
+
+
+26
+
+
+52
+
+
+13
+
+
+2
+
+Correct!
+
+
+Generating sample space using Python:
+In Python, we can generate the sample space for a given experiment using various techniques. One common approach is to use loops and data structures like lists or sets to enumerate all possible outcomes systematically.
+
+Example: Rolling a six-sided die: Consider the experiment of rolling a fair six-sided die. The sample space for this experiment consists of the outcomes {1, 2, 3, 4, 5, 6}. Each outcome represents the face value of the die after rolling.
+
+def generate_sample_space(die_sides):
+    sample_space = []
+    for outcome in range(1, die_sides + 1):
+        sample_space.append(outcome)
+    return sample_space
+
+# Example: Rolling a six-sided die
+sample_space_die = generate_sample_space(6)
+print("Sample Space for rolling a six-sided die:", sample_space_die)
+Using matplotlib to visualize sample space: We can visualize the sample space using histograms or bar plots to represent the frequency or probability of each outcome occurring. In the case of discrete outcomes like rolling a die, a bar plot can effectively show the distribution of outcomes.
+
+import matplotlib.pyplot as plt
+
+def plot_sample_space(sample_space):
+    plt.figure(figsize=(8, 6))
+    plt.bar(sample_space, [1] * len(sample_space), align='center', alpha=0.5)
+    plt.xticks(sample_space)
+    plt.xlabel('Outcomes')
+    plt.ylabel('Probability')
+    plt.title('Sample Space Visualization')
+    plt.grid(True)
+    plt.show()
+
+# Example: Plotting outcomes of a coin toss experiment
+sample_space_coin = ['Heads', 'Tails']
+plot_sample_space(sample_space_coin)
+5
+The aim of this activity is to understand the concept of sample space and practice estimating the sample space for different experiments using Python.
+
+let's use the provided function to estimate the sample space for rolling a fair six-sided die 2 times. What is the size of the sample space?
+
+def calculate_sample_space_size(num_sides, num_rolls):
+    """
+    Function to calculate the size of the sample space for rolling a die multiple times.
+
+    Parameters:
+    - num_sides: Number of sides on the die.
+    - num_rolls: Number of times the die is rolled.
+
+    Returns:
+    - Size of the sample space.
+    """
+    return num_sides ** num_rolls
+
+6
+
+
+36
+
+
+12
+
+
+24
+
+Correct!
+
+
+Now let's experiment with different values for the number of sides on the die and the number of rolls. Print out the size of the sample space for each scenario
+
+Event
+What are Events in Probability?
+Events in probability theory refer to subsets of the sample space, representing specific outcomes or combinations of outcomes of a random experiment. In simpler terms, an event is any particular result or set of results that can occur from a random experiment.
+
+Example
+Suppose a fair die is rolled. The total number of possible outcomes will form the sample space and are given by {1, 2, 3, 4, 5, 6}. Let an event, E, be defined as getting an even number on the die. Then E = {2, 4, 6}. Thus, it can be seen that E is a subset of the sample space and is an outcome of the rolling of a die.
+
+Simple Events
+Any event consisting of a single point of the sample space is known as a simple event in probability. For example, if S = {56 , 78 , 96 , 54 , 89} and E = {78} then E is a simple event.
+
+Compound Events
+Contrary to the simple event, if any event consists of more than one single point of the sample space then such an event is called a compound event. Considering the same example again, if S = {56 ,78 ,96 ,54 ,89}, E1 = {56 ,54 }, E2 = {78 ,56 ,89 } then, E1 and E2 represent two compound events.
+
+Independent Events and Dependent Events
+If the occurrence of any event is completely unaffected by the occurrence of any other event, such events are known as an independent event in probability and the events which are affected by other events are known as dependent events.
+
+Mutually Exclusive Events
+If the occurrence of one event excludes the occurrence of another event, such events are mutually exclusive events i.e. two events don’t have any common point. For example, if S = {1 , 2 , 3 , 4 , 5 , 6} and E1, E2 are two events such that E1 consists of numbers less than 3 and E2 consists of numbers greater than 4.
+
+So, E1 = {1,2} and E2 = {5,6}.
+
+Then, E1 and E2 are mutually exclusive.
+
+Exhaustive Events
+A set of events is called exhaustive if all the events together consume the entire sample space.
+
+6
+Identify the Correct Description of Event A and B
+
+If you were to randomly select a card from a well-shuffled standard deck of 52 playing cards, where event B denotes that the selected card is a heart, and event A denotes that the card selected is an ace, which description would correctly define both the events A and B?
+
+
+Set containing only ace cards.
+
+
+Set containing only ace hearts.
+
+
+Set containing all heart cards and all ace cards regardless of their suits.
+
+
+Set containing only the ace of hearts card.
+
+Correct!
+
+
+7
+Analyze the Experiment Tossing Three Coins
+
+Consider the experiment of tossing three coins. Describe the event 'at least two heads occurs'. Denote heads as H and tails as T.
+
+
+{HTH,THH,HHT}
+
+
+{HHH,HTH,THH,HHT}
+
+
+{HHH,TTT,THT,TTH,TTH,HTH,THH,HHT}
+
+
+{HTH,THH}
+
+Correct!
+
+8
+Consider the experiment of rolling a fair six-sided die twice. Describe the event 'the sum of the two rolls is greater than 9.' Denote the outcomes as the numbers rolled on the first and second dice.
+
+
+{ (4,6), (5,5), (5,6), (6,4), (6,5), (6,6) }
+
+
+{ (5,5), (5,6), (6,4), (6,5), (6,6) }
+
+
+{ (1,1), (2,2), (3,3), (4,4), (5,5), (6,6) }
+
+
+{ (5,6), (6,5) }
+
+Correct!
+
+
+9
+In an experiment where four horses named A, B, C, and D are made to contest a race, describe the event 'the winner is not C'
+
+
+{ A,B,C }
+
+
+{ C,D }
+
+
+{ A,B,D }
+
+
+{ C }
+
+Correct!
+
+
+Random variables
+A random variable 𝑋 is a variable which takes a numerical value which depends on the outcome of the experiment under consideration. Random variables which take a value either from a finite or countably infinite set (e.g. the positive integers) are known as discrete random variables. In contrast, continuous random variables take values in an uncountable set (e.g. positive real numbers).
+
+10
+A variable whose possible values are numerical outcomes of a random phenomenon is termed...
+
+
+Sample space
+
+
+Random Variable
+
+
+Variable
+
+
+Event
+
+Correct!
+
+
+11
+A random variable assigns a random number to each possible outcome of an experiment.
+
+
+False
+
+
+True
+
+Correct!
+
+
+12
+Random variables that can assume only a countable number of values are called...
+
+
+Discrete
+
+
+Continuous
+
+
+Random
+
+
+Real
+
+Correct!
